@@ -1,0 +1,63 @@
+:root {
+    --custom-padding: 2rem;
+    --custom-border-color: rgb(200, 200, 200); 
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+    font-family: Calibri, Arial, 'Times New Roman';
+    color: grey;
+    font-size: 16px;
+    margin: 0 20%;
+    border-left: solid var(--custom-border-color) 1px;
+    border-right: solid var(--custom-border-color) .1px;
+    box-shadow: 0px 0px .75rem .2rem lightgray;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem 2rem;
+    border-bottom: solid var(--custom-border-color) 1px;
+    border-radius: .5rem;
+}
+
+#nav-items {
+    margin-left: auto;
+    display: flex;
+    column-gap: var(--custom-padding, 2rem);
+    flex-wrap: wrap;
+}
+
+li {
+    display: inline-block;
+}
+
+/* Main */
+
+#grid {
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: 50% 50%;
+    grid-template-rows: 75% 25%; */
+    grid-template: 3fr 1fr / 1fr 3fr;
+    grid-template-areas: "info about"
+                        "skills skills";
+}
+
+#box-3 {
+    grid-area: skills;
+}
